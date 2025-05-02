@@ -37,6 +37,18 @@ bot2.addEventListener("click", () => {
     reproducirVideo();
 });
 
+bot3.addEventListener("click", () => {
+    video.src = "media/gato.mp4";
+
+    reproducirVideo();
+});
+
+bot4.addEventListener("click", () => {
+    video.src = "media/molinos.mp4";
+
+    reproducirVideo();
+});
+
 function reproducirVideo() {
     video.muted = false; // Activa el sonido
     video.volume = 0.5; // Establece el volumen al la mitad

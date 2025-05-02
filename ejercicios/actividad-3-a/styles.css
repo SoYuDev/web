@@ -13,7 +13,7 @@
 
 .contenedor {
     margin-top: 80px;
-    display: inline-block; /* Ajusta el tamaño del contenedor al contenido */
+    display: block;
     background-color: rgb(46, 46, 46);
     border-radius: 20px 20px 40px 40px;
     padding: 25px; 

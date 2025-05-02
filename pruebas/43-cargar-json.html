@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0" />
+  <title>JSON</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Segoe UI", sans-serif;
+    }
+    h1, p {
+      text-align: center;
+    }
+    table {
+      width: fit-content;
+      margin: 20px auto;
+      border-collapse: collapse;
+    }
+    td {
+      padding: 10px 20px;
+      border-bottom: solid 1px #bbb;
+    }
+    tr:first-child td {
+      background-color: #555;
+      color: #eee;
+      font-weight: bold;
+    }
+    tr:nth-child(even) td {
+      background-color: #eee;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Cargar datos desde JSON</h1>
+  <p>
+    <input type="button" value="Cargar JSON" id="boton1" />
+  </p>
+
+  <table id="tabla-personas">
+    <tr>
+      <td>Edad</td>
+      <td>Nombre</td>
+      <td>Apellido</td>
+      <td>Profesión</td>
+    </tr>
+
+    <!-- Aquí se insertarán los datos -->
+    
+  </table>
+
+  <script>
+    /* Asociar evento a botón */
+    document.getElementById("boton1").addEventListener("click", cargarDatos);
+
+    /* Función que carga el archivo JSON usando XMLHttpRequest */
+    function cargarDatos() {
+      var xhr = new XMLHttpRequest();
+      /* Se elige el archivo JSON */
+      xhr.open("GET", "43-persona.json", true);
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          /* Se interpreta el JSON y se crea el array personas */
+          var personas = JSON.parse(xhr.responseText);
+
+          /* Ordenamos el array de personas por edad */
+          personas.sort(function (a, b) {
+            return a.edad - b.edad;
+          });
+
+          /* Bucle para recorrer personas */
+          personas.forEach(function (persona) {
+            /* Creamos una nueva fila */
+            var fila = document.createElement("tr");
+
+            /* Creamos y agregamos las celdas de la fila */
+            var tdEdad = document.createElement("td");
+            tdEdad.innerHTML = persona.edad;
+            fila.appendChild(tdEdad);
+
+            var tdNombre = document.createElement("td");
+            tdNombre.innerHTML = persona.nombre;
+            fila.appendChild(tdNombre);
+
+            var tdApellido = document.createElement("td");
+            tdApellido.innerHTML = persona.apellido;
+            fila.appendChild(tdApellido);
+
+            var tdProfesion = document.createElement("td");
+            tdProfesion.innerHTML = persona.profesion;
+            fila.appendChild(tdProfesion);
+
+            /* Agregamos la fila a la tabla */
+            document.getElementById("tabla-personas").appendChild(fila);
+          });
+        }
+      };
+      xhr.send();
+    }
+  </script>
+</body>
+</html>

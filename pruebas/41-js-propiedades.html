@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Propiedades</title>
+    </head>
+    <body>
+        <header>Propiedades JavaScript</header>
+
+        <article>
+            <p>
+                <a href="39-js-eventos.html">Eventos</a> <br />
+                <a href="40-js-selectores.html"> Selectores</a>
+                <a href="http://www.wikipedia.org"> Wikipedia</a>
+            </p>
+        </article>
+
+        <p>
+            <img src="madrid1.jpg" width="100" onclick="document.getElementById('grande').src = this.src" />
+            <img src="madrid2.jpg" width="100" onclick="document.getElementById('grande').src = this.src" />
+            <img src="madrid3.jpg" width="100" onclick="document.getElementById('grande').src = this.src" /> <br />
+            <img src="madrid1.jpg" width="500" id="grande" />
+        </p>
+
+        <p>
+            <input type="button" value="Play" onclick="document.getElementById('tele').play()" />
+            <input type="button" value="Pausa" onclick="document.getElementById('tele').pause()" />
+            <input
+                type="range"
+                value="0.5"
+                min="0"
+                max="1"
+                step="0.1"
+                onclick="document.getElementById('tele').volume= this.value;" />
+            <br />
+
+            <video src="pelicula.webm" id="tele"></video>
+        </p>
+
+        <script>
+            var tv = document.getElementById("tele");
+            tv.onclick = function () {
+                if (tv.paused) {
+                    tv.play();
+                } else {
+                    tv.pause();
+                }
+            };
+
+            document.querySelectorAll("a").target = "_blank";
+        </script>
+    </body>
+</html>

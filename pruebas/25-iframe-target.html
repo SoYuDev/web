@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Iframe Target</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.7.2/css/all.css">
+    <style>
+         * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            max-width: 900px;
+            margin: auto;
+        }
+        #mapa {
+            width: 100%;
+            aspect-ratio: 2/1;
+            margin: 20px auto;
+            border: 1px solid #aaa;
+        }
+        a {
+            text-decoration: none;
+            background: lightblue;
+            padding: 10px 25px;
+            color: navy;
+            border-radius: 8px;
+            margin: 0 10px;
+            box-shadow: 0 1px 2px #888;
+        }
+        a:hover {
+            box-shadow: 0 2px 3px #666;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Iframe Target</h1>
+    </header>
+
+    <article>
+        <p>
+           <a target="nebrija" href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8589.030671763956!2d-3.724121078329779!3d40.43806389627698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422961f0c760c1%3A0x58ecfb4f5c9acd0b!2sInstituto%20Nebrija%20de%20Formaci%C3%B3n%20Profesional%20-%20Edificio%20Joaqu%C3%ADn%20Mar%C3%ADa%20L%C3%B3pez.!5e0!3m2!1ses!2ses!4v1736760086389!5m2!1ses!2ses"><i class="fa-solid fa-building-columns"></i> Instituto FP</a>
+            <a target="nebrija" href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5107.727570772126!2d-3.7183288371686!3d40.42938277460367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4229b4b91ca3af%3A0x72653ab1231d98c!2sUniversidad%20Nebrija!5e0!3m2!1ses!2ses!4v1736760299507!5m2!1ses!2ses"><i class="fa-solid fa-location-dot"></i> Campus Princesa</a>
+            <a target="nebrija" href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12117.018461089696!2d-3.9612545819954157!3d40.60220567719407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4176531dba1423%3A0x5e7b8d183d3790d0!2sUniversidad%20Nebrija%20Campus%20de%20Ciencias%20de%20la%20Vida%20en%20La%20Berzosa!5e0!3m2!1ses!2ses!4v1736760485962!5m2!1ses!2ses"><i class="fa-solid fa-graduation-cap"></i> Campus Berzosa</a>
+        </p>
+
+        <iframe id="mapa" name="nebrija" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8589.030671763956!2d-3.724121078329779!3d40.43806389627698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422961f0c760c1%3A0x58ecfb4f5c9acd0b!2sInstituto%20Nebrija%20de%20Formaci%C3%B3n%20Profesional%20-%20Edificio%20Joaqu%C3%ADn%20Mar%C3%ADa%20L%C3%B3pez.!5e0!3m2!1ses!2ses!4v1736760086389!5m2!1ses!2ses" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </article>
+
+</body>
+</html>
+

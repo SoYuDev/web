@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nikola Tesla Museum</title>
+  <link rel="icon" href="logo.png">
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+
+  <style>
+  /**** (S) PEQUEÑAS ****/
+    /*** (S)  Tipografía  ***/
+      * {
+        font-family: sans-serif;
+      }
+      h1, h2, h3, p {
+        margin-top: 0;
+      }
+      h1, h2, h3 {
+        color: var(--claro);
+      }
+      h1, h2 {
+        text-align: center
+      }
+      a {
+        color: var(--claro);
+        text-decoration: none;
+        font-weight: bold;
+      }
+      a:hover {
+        color: var(--oscuro);
+      }
+    
+    /*** (S)  Colores ***/
+      body {
+        --claro: #94CDD6;
+        --oscuro: #1A5B6D;
+      }
+    
+    /*** (S)  Estructura ***/
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      .anchototal {
+        width: 100%;
+      }
+      .contenedor {
+        width: calc(100% - 40px);
+        margin: auto;
+        max-width: 1400px;
+      }
+      img {
+        width: 100%;
+      }
+    
+    /*** (S)  Elementos ***/
+      section {
+        padding-top: 60px;
+      }
+      header img {
+        width: 120px;
+        box-shadow: 0 2px 6px black;
+        border-radius: 50%;
+      }
+        
+      /** (S)  Navegación **/
+        #logo {
+          width: 36px;
+          float: left;
+        }
+        nav {
+          text-align: center;
+          background: var(--oscuro);
+          position: fixed;
+          top: 0;
+          left: 0;
+          padding: 5px 0;
+          z-index: 5 ;
+        }
+        nav a {
+          padding: 0 10px;
+        }
+        nav a:hover {
+          color: white;
+        }
+        html {
+
+          scroll-behavior: smooth;
+        }
+
+      /** (S)  Formulario **/
+        table {
+          width: 100%;
+        }
+        input, textarea {
+          width: 100%;
+          font-size: 1rem;
+          padding: 3px 6px;
+          margin-bottom: 10px;
+          color:  var(--oscuro);
+          font-weight: bold;
+          border: 1px solid var(--claro);
+        }
+        :focus {
+          background: var(--claro);
+        }
+        input[type='submit'] {
+          width: auto;
+          padding: 5px 20px;
+          color: var(--claro);
+          background: var(--oscuro);
+          border: none;
+          border-radius: 4px;
+        }
+        input[type='submit']:hover {
+          color: white;
+          box-shadow: 0 2px 6px grey;
+        }
+    
+      /** (S)  Footer **/
+        footer {
+          text-align: center;
+          background: var(--oscuro);
+          padding: 10px 0;
+          margin-top: 60px;
+        }
+        footer a {
+          padding: 0 10px;
+        }
+        footer a:hover {
+          color: white;
+        }
+    
+  /**** (M) MEDIANAS ****/
+    @media screen and (min-width: 600px){
+      /*** (M) Tipografía  ***/
+        h1 {
+          font-size: 3.3rem;
+        }
+        h2 {
+          font-size: 2.5rem;
+        }
+        h3 {
+          font-size: 1.7rem;
+        }
+      
+      /*** (M) Colores ***/
+      /*** (M) Estructura ***/
+        .ficha {
+          display: flex;
+          gap: 20px;
+          padding: 10px 0;
+        }
+        .imagen, .texto {
+          width: 100%;
+        }
+      /*** (M) Elementos ***/
+        header {
+          position: absolute;
+          top: 25vw;
+          text-shadow: 0 2px 6px black;
+        }
+      
+        /** (M) Navegación **/
+          nav a {
+            font-size: 1.2rem;
+          }
+          #logo {
+            width: 48px;
+          }
+      
+        /** (M) Formulario **/
+        /** (M) Footer **/
+    }
+  
+  /**** (L) GRANDES ****/
+    @media screen and (min-width: 1000px){
+      /*** (L) Tipografía  ***/
+      /*** (L) Colores ***/
+      /*** (L) Estructura ***/
+        .ficha {
+          display: block;
+        }
+        .L-fila {
+          display: flex;
+          gap: 20px;
+        }
+        .ficha, .formulario, .info, .L-izquierda, .L-derecha {
+          width: 100%;
+        }
+        .L-izquierda {
+          order: 1;
+          text-align: left;
+        }
+        .L-derecha {
+          order: 2;
+          text-align: right;
+        }
+      /*** (L) Elementos ***/
+        /** (L) Navegación **/
+          #logo {
+            width: 32px;
+          }
+          nav {
+            padding: 10px 0;
+          }
+          nav a {
+            font-size: 1.5rem
+          }
+        /** (L) Formulario **/
+        /** (L) Footer **/
+          footer {
+            padding: 20px 0;
+          }
+    }
+  
+  </style>
+</head>
+<body>
+
+
+  <!-- NAV  -->
+  <nav class="anchototal">
+    <div class="contenedor">
+      <div class="L-fila">
+
+        <div class="L-izquierda">
+          <a href="#"><img src="logo.png" id="logo">
+            Nikola Tesla Museum</a>
+        </div>
+
+        <div class="L-derecha">
+        <a href="#">Home</a>
+        <a href="#exhibition">Exhibition</a>
+        <a href="#location">Location</a>
+        <a href="#visit">Visit</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      </div>
+
+    </div>
+  </nav>
+
+
+  <!--  HERO BANNER -->
+  <div class="anchototal">
+    <img src="ideas.jpg">
+    <p class="contenedor">
+      <a href="https://www.youtube.com/watch?v=UDmzBJgP5RU" target="_blank">Play video</a>
+    </p> 
+  </div>
+
+
+  <!-- HEADER  -->
+  <header class="anchototal">
+    <h1><img src="logo.png"><br>
+      Nikola Tesla Museum</h1>
+  </header>
+
+
+  <article>
+
+    <!-- EXHIBITION  -->
+    <section id="exhibition" class="contenedor">
+
+      <h2>Exhibition</h2>
+      <div class="L-fila">
+        <div class="ficha">
+          <div class="imagen">
+            <img src="bombilla.jpg">
+            <p><a href="https://www.youtube.com/watch?v=wyaxh6Nhj5Q" target="_blank">Play video</a></p>            
+          </div>
+
+          <div class="texto">
+            <h3>The future is mine</h3>
+            <p><a href="https://es.wikipedia.org/wiki/Nikola_Tesla" target="_blank">Nikola Tesla</a> has been called the most important man of the twentieth century. Certainly he contributed more to the field of electricity, radio, and television than any other person living or dead. Ultimately he died alone and impoverished having driven all of his friends away through his neurotic and eccentric behavior. Tesla was never able to fit into the world that he found himself in. This autobiography, originally serialized in Electrical Experimenter, is an intensely fascinating glimpse into the mind of a genius, his inventions, and the magical world in which he lived.</p>
+          </div>
+        </div>
+
+        <div class="ficha">
+          <div class="imagen">
+            <img src="permanent.jpg" >
+          </div>
+
+          <div class="texto">
+            <h3>Collection</h3>
+            <p>The permanent collection, authored by Branimir Jovanovic, PhD, director of the <a href="http://www.tesla-museum.org/web/index.php?l=en" target="_blank">Nikola Tesla Museum</a>, is opened on July 8th 2016. The new concept takes into account the setting solutions from 1955 and 2006, using the best of both and promoting them in the terms of content with the new findings acquired in the meantime. The permanent exhibition is located on the ground floor of the museum building.</p>
+          </div>
+        </div>
+
+        <div class="ficha">
+          <div class="imagen">
+            <img src="replica.jpg" >
+          </div>
+
+          <div class="texto">
+            <h3>Replicas</h3>
+            <p>The <a href="http://www.tesla-museum.org/web/index.php?l=en" target="_blank">Nikola Tesla Museum</a> collection of working models and maquettes, catalogue no. T:21, comprises 54 different exhibits (working models, replicas, maquettes and so on) created as part of the Museum’s work or received as gifts from individuals or institutions. In addition to their primary role of scientifically and professionally presenting Tesla’s life and inventions, certain museum exhibits have acquired the own historical and museological value over time. These are now unique museum items which for a full six decades have evoked the scientist’s ideas and actual inventions for visitors to the Museum.</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!--  LOCATION  -->
+    <section id="location" class="anchototal">
+      <h2>Location</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11323.226189422461!2d20.470734!3d44.805131!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc95e7d097b00ee1a!2sNikola+Tesla+Museum!5e0!3m2!1ses!2ses!4v1515002946061" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>    
+    </section> 
+
+
+    <!-- VISIT  -->
+    <section id="visit" class="contenedor">
+      <h2>Visit</h2>
+      <div class="L-fila">
+
+        <div class="ficha">
+          <div class="imagen">
+            <img src="plan.gif" >
+          </div>
+
+          <div class="texto">
+            <h3>Floor Plan</h3>
+            <p>1. Tesla, the man and the creator<br>
+              2. Personal items, correspondence<br>
+              3. The urn containing the ashes<br>
+              4. Tale of electricity<br>
+              5. The polyphase system and its application<br>
+              6. Tesla transformer and its application<br>
+              7. Direct Media-Virtual Reality Headset</p>
+          </div>
+        </div>
+
+        <div class="ficha">
+          <div class="imagen">
+            <img src="tour.jpg" >
+          </div>
+
+          <div class="texto">
+            <h3>Tours</h3>
+            <p>Fee for guided tour in Serbian language: Single Ticket: 250 RSD Group Visit (more than 10 visitors): 150 RSD Students with ISIC (International Student Identity Card): 150 RSD </p>
+            <p>Fee for guided tour in English language: Single Ticket: 500 RSD Group Visit (more than 10 visitors): 300 RSD Students with ISIC (International Student Identity Card): 300 RSD Children- up to 7 years old- free entrance</p>
+          </div>
+        </div>
+
+        <div class="ficha">
+          <div class="imagen">
+            <img src="publicacion.jpg" >
+          </div>
+
+          <div class="texto">
+            <h3>Publications</h3>
+            <p>The <a href="http://teslacollection.com" target="_blank">Tesla Collection</a> is the most comprehensive compilation of newspaper and periodical material ever assembled by or about Nikola Tesla. The Collection begins on August 14, 1886 and continues through December 11, 1920. Comprising approximately 1,700 separate items totaling more than 4,200 pages, the Collection is drawn from both American and British publications and is reproduced directly from the original English Language material.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!--  CONTACT  -->
+    <section id="contact" class="contenedor">
+      <h2>Contact</h2>
+      <div class="L-fila">
+
+        <div class="formulario">
+        <p>Do you have a question? We will respond as soon as possible</p>
+        <form action="http://www.cursos-diseno.es/mostrar.php" method="post">
+          First Name<br>
+          <input type="text" name="nombre"><br>
+          Last Name<br>
+          <input type="text" name="apellidos">
+
+          <table>
+            <tr>
+              <td>Phone<br>
+                <input type="tel"  name="telefono"></td>
+              <td>Email<br>
+                <input type="email" name="email"></td>
+            </tr>
+          </table>
+
+          Message<br>
+          <textarea name="mensaje" rows="4"></textarea><br>
+          <input type="submit">
+        </form>
+      </div>
+
+        <div class="info">
+        <p><a href="http://www.tesla-museum.org/web/index.php?l=en" target="_blank"> Nikola Tesla Museum</a></p>
+        <p>Krunska 51, 11000 Beograd, Serbia<br>
+           Tuesday to Sunday, 10 am to 8 pm.</p>
+        <p> +381 (0) 11 24 33 886<br>
+          +381 (0) 11 24 36 408<br>
+          info@tesla-museum.org</p>
+        <p>In 2003, in recognition of the universal significance of Nikola Tesla and his inventions, UNESCO added Tesla’s archive, as part of the moveable human documentary heritage, to the Memory of the World Register, the highest form of protection of cultural assets. On the national level, the Parliament of the Republic of Serbia, in 2005, brought a Resolution declaring the archival material preserved in the Nikola Tesla Museum as the Personal Collection of Nikola Tesla to be cultural material of exceptional significance.</p>
+      </div>
+
+      </div>
+
+    </section>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="anchototal">
+    <div class="contenedor">
+      <div class="L-fila">
+
+        <div class="L-derecha">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">Youtube</a>
+      </div>
+
+        <div class="L-izquierda">
+        <a href="#">Copyright & image licensing</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of use </a>
+      </div>
+
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

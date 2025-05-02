@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Breakpoint</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <style>
+            /*** Reglas comunes **/
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0;
+                font: 1.1rem 'Segoe Ui', sans-serif;
+                text-align: center
+            }
+            header {
+                padding: 100px 0;
+            }
+            
+            /*** Menos de 800px ***/
+            @media screen and (max-width: 800px){
+                header {
+                    background: green;
+                    color: white;
+                }
+            }
+            
+            /*** Mas de 800px ***/
+            @media screen and (min-width: 801px){
+                header {
+                    background: red;
+                }
+            }
+            
+            
+            
+        
+        </style>
+    </head>
+    <body>
+        
+        <header>
+            
+            <h1>Breakpoint</h1>
+            <p>Punto de ruputa en 800 pixeles</p>
+        </header>
+        
+        
+    </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Media Print</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0;
+                font: 1.1rem 'Segoe Ui', sans-serif;
+            }
+            header,footer {
+                background-color: royalblue;
+                padding: 30px;
+                text-align: center;
+                color: lightyellow;
+            }
+            h2 {
+                color: royalblue;
+            }
+            .fila {
+                overflow: hidden;
+                max-width: 1000px;
+                margin: auto;
+            }
+            article {
+                width: calc(100% - 200px);
+                float: left;
+                padding: 0 20px;
+            }
+            aside {
+                width: 200px;
+                float: left;
+            }
+            
+            img{
+                width: 100%;
+            }
+            a  {
+                color: red;
+                font-weight: bold;
+                text-decoration: none;
+            }
+            a:hover {
+                color: royalblue;
+            }
+            
+            /*** MEDIA PRINT ***/
+            @media print {
+                * {
+                    color: black !important;
+                }
+                body {
+                    font: 13pt 'Cambria', serif;
+                }
+                .noprint {
+                    display: none;
+                }
+                article {
+                    width: 100%;
+                }
+                a:after {
+                    content: ' (' attr(href) ')';
+                    font-weight: normal;
+                    font-style: italic;
+                    color: #999;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header class="noprint">
+            <h1>Media print</h1>
+        </header>
+        
+        <div class="fila">
+            <article>
+                <h2>Titular de la página</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet quo, tenetur soluta esse non eligendi illo doloribus, quia aperiam ratione <a href="http://www.fpnebrija.com">FP Nebrija</a> maiores laudantium quae magni consequatur aliquid ipsum consequuntur. Sequi id aperiam magnam. Illum ab nesciunt ratione hic ipsum omnis odit, officiis at dolor debitis earum ullam aperiam inventore quidem! Eius.</p>
+                <p>Numquam molestiae eligendi voluptate qui quisquam vel, expedita sunt. Quasi vitae nisi repudiandae eaque omnis ipsam labore, eum similique cumque ut voluptate molestiae in sapiente quo ex fugit hic dolor sequi voluptatum fuga. Animi id rerum, vero minima hic sit cumque neque nemo veritatis sint ipsum, rem, maiores delectus voluptates.</p>
+                <p>Iste explicabo consectetur aut, necessitatibus. Voluptatem deserunt officia <a href="https://es.wikipedia.org/wiki/Vincent_van_Gogh"> Van Gogh</a> facilis aspernatur nisi aperiam odio repudiandae saepe repellat minima, beatae commodi cum sint. Consectetur eos magni perferendis, quasi sit laborum tempora non officia at ab harum consequatur, facilis est sequi nisi labore necessitatibus! Est veritatis soluta distinctio aspernatur. Sed, rem. Est, et.</p>
+                <p>Vel autem rerum voluptate incidunt minima, rem numquam voluptatibus dolorem nostrum voluptatum laboriosam sunt voluptatem esse culpa iure unde possimus nesciunt, suscipit tenetur aperiam quia. Itaque, nemo blanditiis in! Earum dolorem accusantium quae illo non eligendi nisi voluptatibus totam, provident eos cumque suscipit harum, voluptas at error inventore officiis odio!</p>
+                <p>Minima suscipit, molestias sint ad consectetur. Molestiae saepe quas, aspernatur error, ipsam quasi ipsa a nobis, dolore iure, modi? Hic consectetur, ut ex, placeat at ipsum vero nesciunt praesentium repellendus maiores quas quibusdam exercitationem, maxime! Doloremque voluptatem odio, dolorum soluta rem quaerat autem illo vero voluptates nostrum, facere ad pariatur!</p>
+            </article>
+            <aside class="noprint">
+                <p>
+                    <img src="anuncio.gif">
+                </p>
+                <form action="http://www.google.es/search" method="get">
+
+                   <input type="text" name="q">
+
+                   <input type="hidden" name="udm" value="2">
+
+                   <input type="submit" value="Buscar">
+
+                </form>
+
+            </aside>
+        </div>
+        
+        <footer class="noprint">
+            <p>aviso legal</p>
+        </footer>
+        
+    </body>
+</html>

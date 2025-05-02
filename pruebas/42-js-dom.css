@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    max-width: 800px;
+    margin: auto;
+}
+
+.objeto {
+    background: lavender;
+    padding: 10px;
+    border: 1px solid #aaa;
+}
+.fila {
+    display: flex;
+    gap: 20px;
+}
+.fila img {
+    width: 100%;
+}

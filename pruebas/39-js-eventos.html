@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Eventos de JavaScript</title>
+    </head>
+    <body>
+        <header>
+            <h1>Eventos de JavaScript</h1>
+            
+        </header>
+        
+        
+        <article>
+           
+           <p>
+               <input type="button" Value="objeto sin evento 1" id="boton1">
+               <input type="button" Value="objeto sin evento 2" id="boton2">
+               <input type="button" Value="objeto sin evento 3" id="boton3">
+               
+           </p>
+           
+           
+           
+            <input type="button" value="onclick" 
+            onclick="alert('Has hecho un click completo')">
+            
+            <p>
+                
+            
+            <input type="button" value="presionar" 
+            onmousedown="document.getElementById('mensaje').innerHTML= 'Estas presionando el botón';"
+            onmouseup="document.getElementById('mensaje').innerHTML= 'Has soltado el botón';"
+            onmouseover="document.getElementById('mensaje').innerHTML= 'Estas dentro del botón';"
+            onmouseout="document.getElementById('mensaje').innerHTML= 'Has salido del botón';"
+            >
+            
+            <span id="mensaje"></span>
+            </p>
+            
+            <p>
+                
+                <input type="password" id="clave"> 
+                <input type="button" value="ver" 
+                    onmousedown="document.getElementById('clave').type = 'text';"
+                    onmouseup="document.getElementById('clave').type = 'password';">
+            </p>
+            
+
+            
+            <form action="">
+                <input type="text" 
+                    onfocus="document.getElementById('mensaje2').innerHTML= 'Has entrado en el campo';"
+                    oninput="document.getElementById('mensaje2').innerHTML= 'Estas cambiando el contenido del campo';"
+                    onblur="document.getElementById('mensaje2').innerHTML= 'Has salido del campo';"
+                >
+                <span id="mensaje2"></span>
+                
+            </form>
+            
+                        
+            <p> Efecto rollover <br>
+                <img src="madrid1.jpg"
+                onmouseover="this.src = 'madrid2.jpg';"
+                onmouseout="this.src = 'madrid1.jpg';">
+            </p>
+            
+            <video src="pelicula.webm"
+                onmousedown="this.play();"
+                onmouseup="this.pause();"
+            >                
+            </video>
+        </article>
+        
+        <script>
+            
+                /** Asociiar evento a objeto, modo1 */
+                document.getElementById('boton1').onclick = function() {
+                    alert('Ok');
+                }
+                
+                
+                /** Asociar evento a objeto, modo 2 */
+                function saludar() {
+                    alert('Ok');
+                };
+                document.getElementById('boton2').addEventListener('click', saludar);
+            
+             /** Asociar evento a objeto, modo 3 */
+               
+                document.getElementById('boton3').addEventListener('click', function(){
+                    alert('Ok');                    
+                });
+            
+            </script>
+        
+        
+    </body>
+</html>

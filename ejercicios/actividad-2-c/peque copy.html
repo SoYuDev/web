@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Carnicerias Luisillo</title>
+
+        <!-- IMPORTANCIÓN ICONOS FONT AWESOME -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        />
+        <link rel="icon" href="./favicon.ico" />
+
+        <style>
+            /**** PEQUEÑAS ****/
+            /*** (S) Tipografía ***/
+            * {
+                font-family: sans-serif;
+            }
+
+            .contenedor {
+                text-align: center;
+            }
+            /*** (S) Color ***/
+
+            /*** (S) Estructura ***/
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+            }
+
+            .anchototal {
+                width: 100%;
+                min-width: 480px;
+                /* Quickfix */
+                background-color: black;
+            }
+
+            .contenedor {
+                width: calc(100% - 50px);
+                margin: auto;
+                max-width: 1600px;
+                min-width: 480px;
+            }
+
+            .columna {
+                width: 75%;
+            }
+
+            .fila {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            header {
+                padding: 40px;
+            }
+
+            /*** (S) Elementos ***/
+
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                filter: blur(1px);
+                display: block;
+            }
+
+            .imagen-sup-inf img {
+                max-height: 250px;
+            }
+            /*** (S) Navegación ***/
+            nav {
+                background-color: rgb(0, 0, 0);
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 5;
+            }
+
+            .columna img {
+                width: 100%;
+                aspect-ratio: 4/3;
+                object-fit: cover;
+                padding: 10px;
+            }
+
+            i {
+                color: white;
+                /* Tamaño del icono */
+                font-size: 28px;
+                padding: 10px;
+                margin-left: 5px;
+            }
+
+            .columna i {
+                color: black;
+                font-size: 55px;
+            }
+
+            .menu-small {
+                display: flex;
+                align-items: center;
+                width: 30%;
+                color: white;
+                font-size: 1.2rem;
+            }
+
+            .menu-m {
+                display: none;
+            }
+            /*** (S) Formulario ***/
+            .formulario {
+                width: 100%;
+                background-color: grey;
+                color: black;
+                margin-top: 60px;
+                display: flex;
+                justify-content: center;
+            }
+
+            form {
+                margin-bottom: 0;
+            }
+
+            input {
+                width: 100%;
+                padding: 6px;
+                margin: 10px 0;
+            }
+
+            textarea {
+                width: 100%;
+                min-height: 100px;
+                resize: vertical;
+                margin: 0;
+            }
+
+            input[type="submit"] {
+                background-color: black;
+                color: white;
+                padding: 10px;
+                border: none;
+                cursor: pointer;
+                border: 3px solid white;
+                width: 20%;
+                margin: 0;
+                float: right;
+            }
+
+            input[type="submit"]:hover {
+                background-color: white;
+                color: black;
+            }
+
+            .formulario-contenedor {
+                margin: 50px 0;
+                width: 75%;
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+            /*** (S) Footer ***/
+
+            footer {
+                background-color: black;
+                color: white;
+                padding: 10px;
+                text-align: center;
+            }
+
+            /**** MEDIANAS ****/
+            @media screen and (min-width: 800px) {
+                /*** (M) Tipografía ***/
+                /*** (M) Color ***/
+                /*** (M) Estructura ***/
+                .contenedor-flotante {
+                    width: calc(100% - 200px);
+                    background: white;
+                    position: relative;
+                    /* Distancia desde arriba */
+                    top: -80px;
+                    /* Distancia desde la izquierda */
+                    left: 50%;
+                    /* Centramos el elemento */
+                    transform: translateX(-50%);
+                    z-index: 2;
+                    min-width: 480px;
+                    max-width: 1600px;
+                }
+
+                .contenedor {
+                    width: calc(100% - 180px);
+                    margin: auto;
+                }
+
+                .fila {
+                    margin-top: 40px;
+                    text-align: center;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 20px;
+                }
+
+                .columna {
+                    width: calc(50% - 20px);
+                    margin: 0;
+                    border: none;
+                }
+
+                .columna i {
+                    font-size: 70px;
+                }
+
+                /*** (M) Elementos ***/
+                .iconos-m {
+                    flex-wrap: nowrap;
+                    padding: 40px 0;
+                }
+                /*** (M) Navegación ***/
+
+                .menu-small {
+                    display: none;
+                }
+
+                .menu-m {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                    z-index: 10;
+                    padding: 20px;
+                }
+
+                .menu-m p {
+                    margin: 0 40px;
+                    text-transform: uppercase;
+                }
+
+                /*** (M) Formulario ***/
+                /*** (M) Footer ***/
+
+                .footer-fix {
+                    margin-top: -180px;
+                }
+            }
+
+            /**** GRANDES ****/
+            @media screen and (min-width: 1600px) {
+                /*** (G) Tipografía ***/
+                /*** (G) Color ***/
+                /*** (G) Estructura ***/
+                /*** (G) Elementos ***/
+                /*** (G) Navegación ***/
+                .menu-m {
+                    display: none;
+                }
+                /*** (G) Formulario ***/
+                /*** (G) Footer ***/
+            }
+        </style>
+    </head>
+    <body>
+        <!-- NAV -->
+        <nav class="anchototal">
+            <div class="menu-small">
+                <i class="fa-solid fa-bars"></i>
+                <p>Menu</p>
+            </div>
+
+            <div class="menu-m">
+                <p>Inicio</p>
+                <p>Servicios</p>
+                <p>Productos</p>
+                <p>Tiendas</p>
+            </div>
+        </nav>
+
+        <!-- IMAGEN SUPERIOR -->
+        <div class="anchototal imagen-sup-inf">
+            <img src="superior.jpg" alt="Imagen productos" />
+        </div>
+        <div class="contenedor-flotante">
+            <!-- HEADER -->
+            <header class="contenedor">
+                <div>
+                    <h2>PRESENTACIÓN</h2>
+                    <p>
+                        En Carnicerías ACME ponemos a su disposición las mejores carnes, embutidos y
+                        platos preparados, entre otras delicias gourmet. Si tienen un evento y
+                        quieren deleitar a sus invitados con unos productos sanos, frescos y
+                        sabrosos, contacten con nosotros.
+                    </p>
+
+                    <h2>Reparto a domicilio</h2>
+                    <p>Realicen su pedido hoy mismo y mañana lo tendrán listo en su domicilio.</p>
+
+                    <h2>Corte tradicional</h2>
+                    <p>No tenemos bandejas preparadas. Nuestro corte es artesano y profesional.</p>
+                </div>
+            </header>
+
+            <!-- MAIN -->
+            <main class="contenedor">
+                <div class="fila">
+                    <div class="columna">
+                        <h3>Calidad</h3>
+                        <img src="carne.jpg" alt="Imagen de carne" />
+                        <p>
+                            Carne de calidad de los valles pirenéicos. Con las mejores garantías de
+                            sanidad y sabor.
+                        </p>
+                    </div>
+
+                    <div class="columna">
+                        <h3>Servicio 24h</h3>
+                        <img src="entrega.jpg" alt="Imagen de entrega" />
+                        <p>
+                            En nuestro transporte refigerado garantizamos que cumpliremos en 24h con
+                            nuestros compromisos.
+                        </p>
+                    </div>
+
+                    <div class="columna">
+                        <h3>Restauración</h3>
+                        <img src="restaurantes.jpg" alt="Imagen de restaurantes" />
+                        <p>
+                            Servimos a los mejores restaurantes de Zaragoza. Si regentas un local de
+                            restauración llámanos.
+                        </p>
+                    </div>
+
+                    <div class="columna">
+                        <h3>Charcutería</h3>
+                        <img src="charcuteria.jpg" alt="Imagen de charcuteria" />
+                        <p>
+                            Los mejores ejemplares de jamón ibérico y embutidos tradicionales.
+                            Especialistas en charcutería.
+                        </p>
+                    </div>
+                </div>
+            </main>
+
+            <!-- LOGOS -->
+            <article class="contenedor">
+                <div class="fila iconos-m">
+                    <div class="columna">
+                        <i class="fa-brands fa-facebook"></i>
+                    </div>
+
+                    <div class="columna">
+                        <i class="fa-brands fa-google"></i>
+                    </div>
+
+                    <div class="columna">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                </div>
+            </article>
+
+            <!-- CONTACT -->
+            <section class="formulario anchototal">
+                <div class="formulario-contenedor">
+                    <form action="http://www.cursos-diseno.es/mostrar.php" method="post">
+                        Email<br />
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Introduzca su email"
+                            required
+                        /><br />
+                        Teléfono<br />
+                        <input
+                            type="tel"
+                            name="telefono"
+                            placeholder="Introduzca su número de teléfono (opcional)"
+                        /><br />
+                        Message<br />
+                        <textarea name="mensaje" rows="4"></textarea><br />
+                        <input type="submit" value="Enviar" />
+                    </form>
+                </div>
+            </section>
+        </div>
+
+        <!-- IMAGEN INFERIOR -->
+        <div class="footer-fix">
+            <article>
+                <div class="anchototal imagen-sup-inf">
+                    <img src="inferior.jpg" alt="Imagen productos" />
+                </div>
+            </article>
+
+            <!-- FOOTER -->
+            <footer class="anchototal">
+                <div>
+                    <p>Calle Bombe 16 50010 Saratoga. Tlfno: 666 999 666.</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

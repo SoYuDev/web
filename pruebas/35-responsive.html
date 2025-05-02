@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Responsive Design</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <style>
+            /** TAMAÑO PEQUEÑO **/ 
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+
+                font: 1rem 'segoe UI' , sans-serif;
+            }
+            img, video, iframe{
+                width: 100%;
+                aspect-ratio: 4/3;
+                object-fit: cover;
+            }
+            .anchocompleto {
+                width: 100%;
+                background: #7648ba;
+                padding: 1px;
+                color: white;
+            }
+            .contenedor {
+                max-width: 1400px;
+                margin: auto;
+            }
+            .ficha {
+                overflow: hidden;
+                margin: 20px 0 0 20px;
+            }
+            .texto, .imagen {
+                float: left;
+                width: calc(50% - 20px);
+                margin: 0 20px 20px 0;
+            }
+            
+            h1, h2 {
+                text-align: center;
+                margin: 30px 0;
+ 
+            }
+            h3, p {
+                margin-bottom: 10px;
+            }
+            
+            
+             /** TAMAÑO MEDIANO **/
+            @media screen and (min-width: 600px) {
+                .texto, .imagen {
+                    float: none;
+                    width: 100%;
+                    margin: 0;
+                }
+                .fila {
+                    overflow: hidden;
+                    margin: 20px 0 0 20px;
+                }
+                .ficha {
+                    float: left;
+                    width: calc(50% - 20px);
+                    margin: 0 20px 20px 0;
+                }
+            }
+            
+            /** TAMAÑO GRANDE **/
+            @media screen and (min-width: 1000px) {
+                .ficha {
+                    margin: 0;
+                }
+                .texto, .imagen {
+                    float: left;
+                    width: calc(50% - 20px);
+                    margin: 0 20px 20px 0;
+                }
+            }
+            
+        </style>    
+    </head>
+    <body>
+        
+        <header class="anchocompleto">
+            <h1>Responsive Design</h1>
+            <h2>Lenguaje de Marcas</h2>
+        </header>
+        
+        <article class="contenedor">
+            <div class="fila">
+                <div class="ficha">
+                    <div class="imagen"><video src="pelicula.mp4" controls></video></div>
+                    <div class="texto">
+                        <h3>Agua</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus amet velit saepe. Voluptatum eaque modi nam voluptate doloremque cumque corporis sequi vitae eum, obcaecati, dolor accusamus non debitis ipsam rerum?</p>
+                    </div>
+                </div>
+                <div class="ficha">
+                    <div class="imagen"><img src="madrid4.jpg"></div>
+                    <div class="texto">
+                        <h3>Tierra</h3>
+                        <p>Quia aliquid quisquam vel illo qui dolores modi porro, mollitia, labore iure architecto obcaecati totam nam? Corporis doloribus ex, rerum facilis in tempora, possimus cum qui quaerat quidem consectetur provident.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="fila">
+                <div class="ficha">
+                    <div class="imagen"><img src="madrid5.jpg"></div>
+                    <div class="texto">
+                        <h3>Fuego</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, quae a alias ratione modi beatae repellat consequatur, amet, nisi sed odio nemo, consectetur sapiente ipsum fugit ex vel temporibus autem.</p>
+                    </div>
+                </div>
+                <div class="ficha">
+                    <div class="imagen"><img src="madrid1.jpg"></div>
+                    <div class="texto">
+                        <h3>Aire</h3>
+                        <p>Quasi ea minima consequatur iste. Accusamus numquam modi nesciunt necessitatibus assumenda nam quo, quod dolorum aliquam distinctio officia odio officiis rem quaerat sed reiciendis, vitae inventore dolores, suscipit molestias quibusdam.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+        
+        
+        <footer class="anchocompleto">
+            <p class="contenedor">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio sed sit ullam optio tempora recusandae neque amet facere eum at, cumque doloremque quia non tempore id fugiat iste explicabo officiis!</p>
+        </footer>
+        
+    </body>
+</html>

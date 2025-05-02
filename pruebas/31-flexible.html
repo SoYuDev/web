@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Diseño flexible</title>
+        
+        <style>
+            * {box-sizing: border-box;
+            }
+            body {
+                margin: 0;
+                font: 1.1rem 'Segoe Ui', sans-serif;
+            }
+            header {
+                height: 50vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            h1 {
+                font-size: 10vw;
+                color: white;
+                text-shadow: 0 2px 4px #555;
+            }
+            .anchocompleto {
+                width: 100%;
+                background: url('calma.jpg') center;
+                background-size: cover;
+                padding: 1px;
+            }
+            .contenedor {
+                width: calc(100% - 40px);
+                max-width: 1200px;
+                margin: auto;
+            }
+            .fila {
+                display: flex;
+                gap: 20px;
+            }
+            .columna {
+                width:  100%;
+            }
+            img, video, iframe{
+                width: 100%;
+                aspect-ratio: 16/9;
+                object-fit: cover;
+            }
+            
+        
+        </style>
+        
+    </head>
+    <body>
+        <header class="anchocompleto">
+            <h1>Diseño flexible</h1>
+        </header>
+        
+        <article class="contenedor">
+            <h2>Titular de la página</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium rem quaerat, nostrum? Ducimus voluptate illo ipsa facere molestias nobis, eligendi aperiam enim molestiae unde ratione sed, itaque vitae ea officia!</p>
+            
+            <div class="fila">
+                <div class="columna">
+                   <p>
+                       <img src="madrid5.jpg">
+                   </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis rerum nesciunt, quibusdam ut fuga voluptate, corporis optio dolores iusto soluta consequuntur labore hic molestiae beatae quaerat sequi. Aut repudiandae, libero, nobis, asperiores, voluptates ipsum dolore quisquam incidunt nesciunt totam fugiat. Necessitatibus error voluptas cupiditate alias perferendis et, sapiente odit provident.</p>
+                </div>
+                <div class="columna">
+                   <p>
+                       <video src="pelicula.webm" controls></video>
+                   </p>
+                    <p>Est architecto maxime ut ratione perferendis beatae dolore a fugit, distinctio sapiente facilis incidunt porro quo ex dolorem et tempore nulla expedita doloribus dignissimos sequi facere aperiam. Nobis ut commodi quas eaque officia aut facere sint vitae eum nemo. Molestiae aliquid fugiat blanditiis inventore corrupti possimus voluptas, quo. Sapiente, dolorum.</p>
+                </div>
+                <div class="columna">
+                   <p>
+                       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2553.540751673531!2d-3.7182557022487046!3d40.437888671436134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422961f0c760c1%3A0x58ecfb4f5c9acd0b!2sInstituto%20Nebrija%20de%20Formaci%C3%B3n%20Profesional%20-%20Edificio%20Joaqu%C3%ADn%20Mar%C3%ADa%20L%C3%B3pez.!5e0!3m2!1ses!2ses!4v1739176401112!5m2!1ses!2ses" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                   </p>
+                    <p>Praesentium corrupti, obcaecati libero assumenda repellat veritatis consectetur repellendus amet. Facere ut, commodi neque voluptatum provident voluptate, officia minus, voluptas enim hic earum vel in ipsa ex quasi nemo at consequuntur laborum labore unde cupiditate blanditiis sunt distinctio maxime quidem. Totam animi labore blanditiis amet nihil adipisci. Repudiandae, id, minus.</p>
+                </div>
+            </div>
+        </article>
+        
+        <footer class="anchocompleto">
+            <p class="contenedor">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, quas deserunt. Enim ullam deleniti impedit, vero, quis necessitatibus consequatur ex!</p>
+        </footer>
+        
+    </body>
+</html>

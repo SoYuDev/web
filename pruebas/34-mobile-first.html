@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Mobile First</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <style>
+            /** TAMAÑO PEQUEÑO **/ 
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0;
+                font: 1rem 'segoe UI' , sans-serif;
+            }
+            .anchocompleto {
+                width: 100%;
+                background: orange;
+                padding: 1px;
+            }
+            .contenedor {
+                max-width: 1400px;
+                margin: auto;
+            }
+            h1 {
+                text-align: center;
+                color: white;
+            }
+            .fila {
+                padding: 20px;
+            }
+            .columna {
+                background: #f8f8f8;
+                border: 1px solid #eee;
+                padding: 1px 20px;
+                margin: 20px 0;
+            }
+            img, video, iframe{
+                width: 100%;
+                aspect-ratio: 4/3;
+                object-fit: cover;
+            }
+            .escritorio {
+                display: none;
+            }
+            
+            
+            /** TAMAÑO MEDIANO **/
+            @media screen and (min-width: 600px) {
+                body {
+                    font-size: 1.1rem;
+                }
+                .fila {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 20px;
+                    padding-right: 0;
+                }
+                .columna {
+                    width: calc(50% - 20px);
+                    margin:0;
+                    background: #eee;
+                    border: none;
+                }
+            }
+            
+            /** TAMAÑO GRANDE **/
+            @media screen and (min-width: 1000px) {
+                body {
+                    font-size: 1.2rem;
+                    color: #333;
+                }
+                .columna {
+                    width: calc(33.3% - 20px);
+                }
+                .mobil {
+                    display: none;
+                }
+                .escritorio {
+                    display: block;
+                }
+            }
+            
+            
+        </style>
+    </head>
+    <body>
+        
+        <header class="anchocompleto">
+            <h1>Mobile First</h1>
+        </header>
+        
+        <article class="contenedor">
+            <div class="fila">
+                <div class="columna">
+                    <p>
+                    <img src="madrid1.jpg" class="mobil">
+                    <video src="pelicula.mp4" controls class="escritorio"></video>
+                    </p>
+                </div>
+                <div class="columna">
+                    <p>
+                        <img src="madrid4.jpg">
+                    </p>
+                </div>
+                <div class="columna">
+                    <p>Veniam itaque at ea, error facere autem qui tempora dolores reiciendis nisi voluptatum illum dolore nam earum blanditiis aliquid ipsam laborum cum adipisci totam quos cumque ipsum saepe vel repudiandae.</p>
+                </div>
+                <div class="columna">
+                    <p>Nobis aperiam temporibus assumenda eligendi, perspiciatis quaerat. Harum pariatur neque maiores, iure dicta provident dolores hic nostrum, iste, dolorum eaque tenetur a illo labore obcaecati consectetur. Quod, officiis aperiam enim!</p>
+                </div>
+                <div class="columna">
+                    <p>Iste suscipit provident repellat rerum et ratione nisi, voluptates similique? Ipsum obcaecati consectetur impedit totam ipsa voluptatibus cupiditate officia velit, hic enim aliquam ab nulla, illo dolor odit eius eum?</p>
+                </div>
+                <div class="columna">
+                    <p>Ipsum necessitatibus beatae accusamus, ut molestiae nostrum dicta, esse modi unde molestias reiciendis provident totam, dignissimos quibusdam vel libero, dolorem nesciunt voluptatibus cupiditate deleniti veritatis. Aliquam rerum vero delectus reiciendis.</p>
+                </div>
+            </div>
+            
+        </article>
+        
+        <footer class="anchocompleto">
+            <p class="contenedor">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non mollitia, officiis praesentium repellendus. Commodi animi omnis, velit dignissimos labore sunt necessitatibus molestias illo officiis alias harum, ratione, dolores aspernatur iusto.</p>
+        </footer>
+        
+    </body>
+</html>

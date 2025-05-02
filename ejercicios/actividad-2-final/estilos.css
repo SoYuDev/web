@@ -1,0 +1,728 @@
+/* IMPORTACION DE FUENTE */
+@import url('https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
+/**** (S) PEQUEÑO ****/
+    /*** (S) Tipografía  ***/
+    * {
+        font-family: 'Reddit Sans', sans-serif;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 1.8rem;
+    }
+
+    .creditos p, a {
+        font-size: 1rem
+    }
+
+    .noticias-text  {
+        text-align: left;
+        font-size: 1.6rem;
+    }
+
+    .fecha {
+        font-size: 0.95rem;
+        text-align: left;
+    }
+
+
+    
+
+    /*** (S) Colores ***/
+    body {
+        /* Definicion de variables */
+        --oscuro: #181a1b;
+        --naranja: #ff4500;
+        background-color: var(--oscuro);
+    }
+
+    h1, h2, p {
+        color: white;
+    }
+
+    header {
+        background-color: var(--naranja);
+    }
+
+    .activo {
+        background-color: var(--naranja);
+        border-radius: 20px;
+    }
+
+    .creditos p {
+        color: grey;
+    }
+
+    .creditos a {
+        color: gray;
+    }
+
+    .creditos a:hover {
+        color: var(--naranja);
+    }
+
+    td a {
+        color: gray;
+    }
+
+    td a:hover {
+        color: var(--naranja);
+    }
+    /*** (S) Estructura ***/
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .contenedor {
+        width: calc(100% - 40px);
+        margin: auto;
+        max-width: 1600px;
+
+    }
+
+    .anchototal{
+        width: 100%;
+    }
+
+    header div {
+        display: flex;
+        flex-direction: column;
+        padding: 25px;
+    }
+
+    .noticia-ficha {
+        margin: 40px 0;
+    }
+
+    header {
+        /* Margen que ocupa el nav para que el header empiece justo por debajo */
+        margin-top: 60px;
+    }
+    /*** (S) Elementos ***/
+    .logo-grande {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo-grande img {
+        width: 250px;
+    }
+
+    .noticias img {
+        object-fit: cover;
+        aspect-ratio: 16/9;
+        width: 95%;
+        border-radius: 40px;
+    }
+      /** (S) Navegación **/
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        background-color: var(--oscuro);
+    }
+
+    .menu-m {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .logo {
+        width: 25%;
+    }
+
+    .logo img {
+        width: 107px;
+        margin-left: 10px;
+        display: block;
+    }
+
+    .dropdown {
+        width: 75%;
+    }
+
+    .dropdown i {
+        font-size: 30px;
+        float: right;
+        padding: 0 25px 0 0;
+        color: white;
+    }
+
+    .dropdown i:hover {
+        color: var(--naranja);
+    }
+    /* Cuando ponga el cursor en el icono, se mostrará el menú desplegable. Para ello, añadimos la siguiente regla CSS: */
+    .dropdown i:hover .dropdown-content {
+        display: block;
+    }
+    /* Para dispositivos moviles hover no funciona por lo que debemos de usar has */
+    .dropdown:has(i:focus) .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: var(--oscuro);
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 10;
+        right: 0;
+    }
+
+    .dropdown-content a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: var(--naranja);
+    }
+      /** (S) Formulario **/
+    .formulario {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .form-text, .form-form {
+        width: 90%;
+    }
+
+    .form-text {
+        text-align: center;
+        margin: 0px 30px;
+    }
+
+    .form-form {
+        border: 1px solid var(--naranja);
+        border-radius: 5px;
+        padding: 15px;
+    }
+
+    table {
+        width: 100%;
+        color: white;
+        border-spacing: 8px;
+    }
+
+    .grande {
+        width: 100%;
+    }
+
+    .peque {
+        width: 50%;
+    }
+
+    input {
+        padding: 4px;
+        border-radius: 4px;
+        border: 1px solid var(--naranja);
+        background-color: var(--oscuro);
+        font-family: 'Reddit Sans', sans-serif;
+        color: white;
+    }
+
+    input::placeholder {
+        color:#fdede8f3;
+    }
+
+    input[type = 'submit'] {
+        font-size: 1.2rem;
+        margin-top: 10px;
+        padding: 8px 25px;
+        box-shadow: 0 0px 6px var(--naranja);
+    }
+
+    input[type='submit']:hover {
+        background-color: var(--naranja);
+    }
+
+    :focus {
+        background-color:#252525;
+    }
+
+        td:first-child {
+        text-align: right;
+        vertical-align: top;
+    }
+
+        /** (S) Aviso Legal) **/
+        .aviso-legal h2 {
+            text-align: left;
+        }
+
+        .aviso-legal a {
+            color: grey;
+        }
+
+        .aviso-legal a:hover {
+            color: var(--naranja);
+        }
+
+
+
+
+    
+      /** (S) Footer **/
+    footer {
+        margin-top: 40px;
+        background-color: black;
+    }
+
+    .iconos-redes a {
+        text-decoration: none;
+    }
+
+    .iconos-redes i {
+        color: white;
+        font-size: 30px;
+        padding: 10px;
+        
+    }
+
+    .iconos-redes i:hover {
+        /* Añadido de tiempo de transición para llegar al color */
+        transition: color 0.3s;
+        color: var(--naranja);
+    }
+
+    /** (S) Slider **/
+
+    .slider-cont {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .slider {
+        margin: 20px auto;
+        width: 300px;
+        position: relative;
+        display: flex;
+        /* Si las imagenes se salen metemos un scroll */
+        overflow: scroll;
+        /* Escondemos el scroll en y */
+        overflow-y: hidden;
+        /* Establecemos el tipo de scroll, en este caso horizontal y con posicion mandatoria */
+        scroll-snap-type: x mandatory;
+    }
+
+    .slider img {
+        width: 100%;
+        left: 0;
+        /* position sticky para que se quede pegado a la izquierda */
+        position: sticky;
+        object-fit: cover;
+        border-radius: 5px;
+        scroll-snap-align: center;
+    }
+
+    /** (S) PRESENTAICON **/
+    .presentacion {
+        background-color: var(--naranja);
+    }
+
+    .presentacion h2{
+        text-align: left;
+        margin-left: 25px;
+        margin-top: -1px;
+    }
+
+    .presentacion p {
+        margin: 0 0 0 25px;
+        padding-bottom: 25px;
+    }
+
+    /** (S) MAIN **/
+    .descargas {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .descargas i:hover {
+        transition: color 0.3s;
+        color: var(--naranja);
+    }
+
+    .descargas i {
+        color: white;
+        font-size: 70px;
+    }
+
+    /** (S) DOCUMENTACION **/
+    .ficha-func {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; /* Permite el wrapping */
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+        margin-top: 80px;
+    }
+    
+    .ficha-func div {
+        flex: 1 1 300px; /* Permite que los elementos se ajusten y hagan wrap */
+        box-sizing: border-box; /* Asegúrate de que el padding y el borde se incluyan en el ancho total */
+    }
+    
+    .ficha-img {
+        display: flex;
+        justify-content: center;
+        flex: 1 1 300px; /* Permite que los elementos se ajusten y hagan wrap */
+
+    }
+    
+    .ficha-func img {
+        width: 80%;
+        height: auto;
+        margin: auto;
+    }
+
+    .documentacion-titulo {
+        text-align: center;
+    }
+
+    .documentacion-video {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .documentacion-video iframe {
+        width: 100%;
+        height: 315px;
+    }
+
+    .enlace {
+        color: gray;
+        font-size: 1.2rem;
+    }
+
+    .enlace:hover {
+        color: var(--naranja);
+    }
+
+
+
+/**** (M) MEDIANO ****/
+@media screen and (min-width: 640px) {
+    /*** (M) Tipografía  ***/
+    p {
+        font-size: 1.8rem;
+    }
+
+    .menu-m a {
+        font-size: 1.3rem;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .noticias-text {
+        font-size: 2.5rem;
+    }
+
+    .noticias p {
+        font-size: 1.4rem;
+    }
+
+    .fecha{
+        font-size: 1rem !important;
+        padding: 20px 0;
+    }
+
+    .creditos p, a {
+        font-size: 1rem
+    }
+    /*** (M) Colores ***/
+    /*** (M) Estructura ***/
+    header {
+        margin-top: 145px;
+    }
+
+
+
+    .contenedor {
+        width: calc(100% - 100px);
+    }
+
+    .noticias {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .noticia-ficha p {
+        margin: 0 15px;
+    }
+
+
+    .noticia-ficha {
+        width: 50%;
+    }
+    /*** (M) Elementos ***/
+    .noticias img {
+        margin-bottom: 20px;
+    }
+      /** (M) Navegación **/
+    .menu {
+        display: none;
+    }
+
+    .menu-m {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    
+    .logo {
+        width: 20%;
+    }
+
+    .menu-m img {
+        margin-left: 25px;
+    }
+
+    .logo img {
+        width: 160px;
+    }
+
+    .menu-m-options {
+        width: 80%;
+    }
+
+    .menu-m-options ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: nowrap;
+        /* Evita que el texto tenga saltos de línea en caso de que no quepa */
+        white-space: nowrap;
+    }
+
+    .menu-m li {
+        list-style: none;
+        
+    }
+
+    .menu-m a {
+        text-decoration: none;
+        color: white;
+        padding: 5px 25px;
+    }
+
+    .menu-m-options a:hover {
+        background-color: rgb(70, 70, 70);
+        border-radius: 20px;
+    }
+      /** (M) Formulario **/
+    .formulario {
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+        align-items: flex-start;
+        flex-wrap:  nowrap;
+    }
+    .form-text, .form-form {
+        width: 50%;
+    }
+
+    .form-form h2 {
+        display: flex;
+        justify-content: center;
+    }
+
+    input {
+        padding: 7px;
+        font-size: 1rem;
+    }
+    
+
+
+      /** (M) Footer **/
+    .iconos-redes i {
+        color: white;
+        font-size: 40px;
+        padding: 10px;
+        
+    }
+
+    /** (M) Slider **/
+    .slider-cont {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 20px 400px;
+    }
+
+    .slider {
+        margin: 20px auto;
+        width: 400px;
+        position: relative;
+        display: flex;
+        /* Si las imagenes se salen metemos un scroll */
+        overflow: scroll;
+        /* Escondemos el scroll en y */
+        overflow-y: hidden;
+        /* Establecemos el tipo de scroll, en este caso horizontal y con posicion mandatoria */
+        scroll-snap-type: x mandatory;
+    }
+
+        /** (M) DOCUMENTACION **/
+
+        .ficha-img img {
+            width: 80%;
+            margin: 0;
+            margin-right: auto;
+        }
+
+        .ficha-img-b img {
+            margin-left: auto;
+        }
+
+        .ficha-func h2 {
+            text-align: left;
+            margin-top: 0;
+        }
+
+        .documentacion-video iframe {
+            width: 560px;
+            height: 315px;
+        }
+
+        .ficha-func {
+            gap: 40px;
+        }
+
+        .ficha-func-b {
+            flex-direction: row-reverse;
+        }
+
+
+    
+
+    /** (M) MAIN **/
+    .descargas {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+    }
+
+    .descargas i {
+        color: white;
+        font-size: 110px;
+    }
+    
+}
+
+
+
+
+
+/**** (G) GRANDE ****/
+@media screen and (min-width: 1400px) {
+    /*** (G) Tipografía  ***/
+    p {
+        font-size: 2rem;
+    }
+
+    .menu-m a {
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        font-size: 4.3rem;
+    }
+
+    h2 {
+        font-size: 2.7rem;
+        text-align: center;
+    }
+
+    .creditos p, a {
+        font-size: 1.3rem
+    }
+    /*** (G) Colores ***/
+    /*** (G) Estructura ***/
+    /*** (G) Elementos ***/
+      /** (G) Navegación **/
+      /** (G) Formulario **/
+      /** (G) Footer **/
+    .iconos-redes i {
+        color: white;
+        font-size: 50px;
+        padding: 10px;
+        
+    }
+    
+    /** (M) MAIN **/
+    .descargas {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 120px;
+    }
+
+    .descargas i {
+        color: white;
+        font-size: 120px;
+    }
+
+    /** (G) DOCUMENTACION **/
+    .ficha-img img {
+        width: 520px;
+    }
+
+    .documentacion-video iframe {
+        width: 800px;
+        height: 450px;
+    }
+    
+}

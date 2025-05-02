@@ -1,0 +1,62 @@
+[
+  {
+    "nombre": "Carlos",
+    "apellido": "Pérez",
+    "edad": 34,
+    "profesion": "Ingeniero"
+  },
+  {
+    "nombre": "Ana",
+    "apellido": "Gómez",
+    "edad": 29,
+    "profesion": "Doctora"
+  },
+  {
+    "nombre": "Luis",
+    "apellido": "Martínez",
+    "edad": 45,
+    "profesion": "Abogado"
+  },
+  {
+    "nombre": "Laura",
+    "apellido": "Sánchez",
+    "edad": 39,
+    "profesion": "Arquitecta"
+  },
+  {
+    "nombre": "José",
+    "apellido": "Rodríguez",
+    "edad": 50,
+    "profesion": "Profesor"
+  },
+  {
+    "nombre": "Marta",
+    "apellido": "Fernández",
+    "edad": 24,
+    "profesion": "Diseñadora gráfica"
+  },
+  {
+    "nombre": "Pedro",
+    "apellido": "López",
+    "edad": 37,
+    "profesion": "Chef"
+  },
+  {
+    "nombre": "Raquel",
+    "apellido": "Hernández",
+    "edad": 31,
+    "profesion": "Contadora"
+  },
+  {
+    "nombre": "Juan",
+    "apellido": "González",
+    "edad": 28,
+    "profesion": "Programador"
+  },
+  {
+    "nombre": "Elena",
+    "apellido": "Vázquez",
+    "edad": 41,
+    "profesion": "Psicóloga"
+  }
+]

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Selectores Javascript</title>
+        
+        <style>
+            article p:first-child {
+                color: navy;
+            }
+        
+        
+        </style>
+        
+        
+    </head>
+    <body>
+        <header>
+            <h1>Selectores</h1>
+        </header>
+        
+        <article>
+           
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur tempora fuga, minima laudantium incidunt quasi possimus totam sint dolorem. Non.</p>
+           <p>Unde ab quia quas, quaerat, enim eveniet, dolorem similique quis consequuntur ipsum nobis nisi necessitatibus velit minus animi accusantium accusamus!</p>
+           <p>Animi possimus vitae maxime nemo voluptate soluta et accusantium architecto, veritatis inventore, dolor. Explicabo animi accusantium consequatur cupiditate excepturi, fugit!</p>
+           
+            
+            <p>
+                <input type="button" value="Cambia title" onclick="document.title = 'Richart';">
+                
+                <br>
+                <input type="button" value="Enviar" onclick="this.value='Espera...'; this.disabled= true">
+                
+                <br>
+                 <input type="button" value="Cambiar 1er parrafo" onclick="cambiarPrimerParrafo();">
+                
+            </p>
+            
+            <form action="" name="miformulario">
+                
+                Ciudad  <input type="text" name="ciudad">
+                
+                <input type="button" value="Madrid" 
+                        onclick="document.miformulario.ciudad.value = 'Madrid';">
+                
+            </form>
+            
+            <p>
+                <input type="button" value="Cambiar celda" 
+                        onclick="document.getElementById('celda').style.backgroundColor = 'orange'; ">
+            </p>
+            
+            <table border="1">
+                <tr>
+                    <td>Lorem ipsum dolor.</td>
+                    <td>Magni, quis, laboriosam.</td>
+                    <td>Veritatis, vero id?</td>
+                </tr>
+                <tr>
+                    <td>Lorem ipsum dolor.</td>
+                    <td id="celda">Vitae, qui voluptas!</td>
+                    <td>A, nam, quos.</td>
+                </tr>
+            </table>
+            
+            
+            
+        </article>
+        <script>
+            function cambiarPrimerParrafo() {
+            var parrafo = document.querySelector('article p:first-child');
+            parrafo.style.fontFamily = 'Calibri, sans-serif';
+            parrafo.style.fontSize= '1.5rem';
+        }
+        </script>
+        
+        
+    </body>
+</html>

@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Flex Box</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                max-width: 1200px;
+                margin: 20px auto;
+                font-family: 'Segoe UI', sans-serif;
+            }
+            
+            section {
+                background: #eee;
+                margin: 20px 0;
+            }
+            .columna {
+                background: white;
+                border: 1px solid #bbb;
+                padding: 10px
+            }
+            
+            
+            /**  FILA 1  **/
+            .fila1 {
+                display: flex;
+                padding: 20px 0  0 20px;
+                flex-direction: row-reverse;
+            }
+            
+            .fila1 .columna {
+                margin: 0 20px 20px 0;
+            }
+            
+            
+            /**  FILA 2  **/
+            .fila2 {
+                display: flex;
+                gap: 20px;
+                padding: 20px;
+                justify-content: flex-end; /* alineacion horizontal */
+                align-items: flex-end;   /* alineacion vertical  1 renglon*/
+            }
+            .fila2 .columna {
+                width: 18%;
+                order: 2;
+            }
+            #columna-2-C {
+                width: 35%;
+                align-self: flex-start;
+                order: 1;
+            }
+            
+            
+            /**  FILA 3  **/
+            .fila3 {
+                height: 1000px;
+                display: flex;
+                padding: 20px;
+                gap: 20px;
+                flex-wrap: wrap;
+                align-content: space-between;
+            }
+            
+            .fila3 .columna {
+                width: 23%;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Flex Box</h1>
+        </header>
+
+        <article>
+           
+            <h2>Ejemplo 1</h2>
+            <section class="fila1">
+                <div class="columna">
+                    <h3>A</h3>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae commodi, incidunt et illum ab
+                    voluptatibus, quod consequuntur odit quas quisquam est delectus repellendus nemo temporibus
+                    voluptates fuga. Consectetur praesentium eos similique unde alias quam excepturi voluptatum
+                    perferendis. Ab iusto optio aspernatur itaque ullam laudantium? Repellat, numquam distinctio ex
+                    culpa similique.
+                </div>
+                <div class="columna">
+                    <h3>B</h3>
+                    Dicta explicabo officia, facilis, consequuntur quibusdam eaque rerum doloribus nam, ex, impedit
+                    placeat non ratione.
+                </div>
+                <div class="columna">
+                    <h3>C</h3>
+
+                    Esse voluptates, suscipit, optio quasi minima velit voluptatem nisi maiores magnam alias laudantium
+                    consequuntur eos. Dicta deleniti eius provident laboriosam fuga maxime reiciendis recusandae
+                    similique accusamus illo. Quas dolores sequi in nihil ratione possimus alias magni voluptatibus id
+                    accusamus veritatis facilis modi doloremque incidunt molestiae asperiores, totam, dolorem doloribus?
+                    Nemo.
+                </div>
+                <div class="columna">
+                    <h3>D</h3>
+                    Labore voluptates quos impedit assumenda dolorum fugiat, vero maiores nostrum? Expedita beatae
+                    mollitia iste, voluptate sed nam aliquid neque, nobis, odit repellendus quibusdam dolore in
+                    doloremque dolorem atque. Fuga animi ab dolor ducimus perferendis laboriosam omnis,sunt natus atque
+                    ad voluptatem aut cupiditate? Expedita amet deleniti, ea magnam molestiae dolorem esse hic deserunt
+                    nostrum, dignissimos quaerat quos similique enim vitae dolor, modi aliquid. Et molestias distinctio
+                    ex inventore ut optio accusantium dignissimos eveniet ea dolorem, ullam ipsam est excepturi aperiam.
+                    Deleniti doloremque provident optio, ut!
+                </div>
+            </section>
+            
+            <h2>Ejemplo 2</h2>
+            <section class="fila2">
+                <div class="columna">
+                    <h3>A</h3>
+                    omnis perspiciatis debitis soluta assumenda harum eius optio fuga, doloremque voluptate eligendi,
+                    veritatis minima vel nemo, distinctio hic eos. Id voluptas maxime possimus.
+                </div>
+                <div class="columna">
+                    <h3>B</h3>
+                    Dolorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio iure
+                    nemo saepe blanditiis hic a quam officiis sapiente quibusdam. Illo culpa at consectetur magni
+                    nesciunt architecto, aspernatur facere, ullam molestiae atque at quisquam illo perspiciatis esse,
+                    voluptatem reprehenderit animi! Repellat labore cum incidunt expedita doloribus, porro voluptatem
+                    nisi distinctio minus a. Soluta qui vero, dolore sint ex. Similique, error, aliquid.
+                </div>
+                <div class="columna" id="columna-2-C">
+                    <h3>C</h3>
+                    Harum necessitatibus illum qui in asperiores, consequatur ipsam. Fugiat tempore nam saepe deleniti
+                    vel expedita magnam quae a vero, placeat eligendi fugit officia totam, exercitationem? Facilis,
+                    adipisci minima dolores. Quis eum fugiat consectetur necessitatibus odio hic quae porro labore iste
+                    amet repellendus, reprehenderit mollitia autem pariatur. Quidem soluta quisquam doloribus.
+                </div>
+                <div class="columna">
+                    <h3>D</h3>
+                    Et dolore in ex omnis sunt dolorem inventore, soluta rerum excepturi similique veritatis corrupti
+                    iusto repellat nobis architecto vel dolor aut dignissimos, dolorum magni natus placeat commodi sit.
+                    Reprehenderit impedit odio dolores, et placeat nisi totam quod atque, ex ullam, molestias tempora
+                    libero voluptatum? Iure, magnam, beatae. Culpa minus, unde!
+                </div>
+            </section>
+            
+            <h2>Ejemplo 3</h2>
+            <section class="fila3">
+                <div class="columna">
+                    <h3>A</h3>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae commodi, incidunt et illum ab
+                    voluptatibus, quod consequuntur odit quas quisquam est delectus repellendus nemo temporibus
+                    voluptates fuga. Consectetur praesentium eos similique unde alias quam excepturi voluptatum
+                    perferendis. Ab iusto optio aspernatur itaque ullam laudantium? Repellat, numquam distinctio ex
+                    culpa similique.
+                </div>
+                <div class="columna">
+                    <h3>B</h3>
+                    Dicta explicabo officia, facilis, consequuntur quibusdam eaque rerum doloribus nam, ex, impedit
+                    placeat non ratione.
+                </div>
+                <div class="columna">
+                    <h3>C</h3>
+
+                    Esse voluptates, suscipit, optio quasi minima velit voluptatem nisi maiores magnam alias laudantium
+                    consequuntur eos. Dicta deleniti eius provident laboriosam fuga maxime reiciendis recusandae
+                    similique accusamus illo. Quas dolores sequi in nihil ratione possimus alias magni voluptatibus id
+                    accusamus veritatis facilis modi doloremque incidunt molestiae asperiores, totam, dolorem doloribus?
+                    Nemo.
+                </div>
+                <div class="columna">
+                    <h3>D</h3>
+                    Labore voluptates quos impedit assumenda dolorum fugiat, vero maiores nostrum? Expedita beatae
+                    mollitia iste, voluptate sed nam aliquid neque, nobis, odit repellendus quibusdam dolore in
+                    doloremque dolorem atque. Fuga animi ab dolor ducimus perferendis laboriosam omnis,sunt natus atque
+                    ad voluptatem aut cupiditate? Expedita amet deleniti, ea magnam molestiae dolorem esse hic deserunt
+                    nostrum, dignissimos quaerat quos similique enim vitae dolor, modi aliquid. Et molestias distinctio
+                    ex inventore ut optio accusantium dignissimos eveniet ea dolorem, ullam ipsam est excepturi aperiam.
+                    Deleniti doloremque provident optio, ut!
+                </div>
+                <div class="columna">
+                    <h3>E</h3>
+                    Dicta explicabo officia, facilis, consequuntur quibusdam eaque rerum doloribus nam, ex, impedit
+                    placeat non ratione.
+                </div>
+                <div class="columna">
+                    <h3>F</h3>
+                    Esse voluptates, suscipit, optio quasi minima velit voluptatem nisi maiores magnam alias laudantium
+                    consequuntur eos. Dicta deleniti eius provident laboriosam fuga maxime reiciendis recusandae
+                    similique accusamus illo. Quas dolores sequi in nihil ratione possimus alias magni voluptatibus id
+                    accusamus veritatis facilis modi doloremque incidunt molestiae asperiores, totam, dolorem doloribus?
+                    Nemo.
+                </div>
+            </section>
+        </article>
+    </body>
+</html>

@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Tablas</title>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        font-family: 'segoe ui', sans-serif;
+    }
+    
+    table#tabla1 {
+        background: #eee;
+        /* border: 3px red dotted; */
+        border-collapse: separate;
+        border-spacing: 10px;
+    }
+    #tabla1 td,
+    #tabla1 th {
+        background: white;
+        padding: 10px;
+        width: 25%;
+        text-align: center;
+        height: 100px;
+        vertical-align: top;
+        /* border: 1px solid #444; */
+    }
+    
+    /*  TABLA 2 */
+    
+    #tabla2 {
+        background: #eee;
+        border-collapse: collapse;
+    }
+    #tabla2 td {
+        padding: 10px 20px;
+        border-bottom: 1px solid #777;
+    }
+    
+    #tabla2 td:first-child { /* 1ª columna */
+        text-align: right;
+    }
+    #tabla2 td:last-child { /* Ultima columna */
+        text-align: center;
+    }
+    #tabla2 td:nth-child(3) { /* 3ª columna */
+        font-style: italic;
+    }
+    #tabla2 tr:first-child td { /* 1ª fila */
+        background: #555;
+        color: #ddd;
+        font-weight: bold;
+    }
+    #tabla2 tr:last-child td { /* ultima fila */
+        background: white;
+    }
+    #tabla2 tr:nth-child(3) td { /* tercera fila */
+        color: tomato;
+    }
+    #tabla2 tr:nth-child(4) td:nth-child(2){
+        background-color: tomato;
+    }
+    
+    /*  TABLA 3 */
+    #tabla3 {
+        background: #f8f8f8;
+        border-collapse: collapse;
+    }
+    #tabla3 td {
+        padding: 10px 20px;
+    }
+    #tabla3 tr:nth-child(even) td {
+        background: #ddd
+    }
+    #tabla3 td:nth-child(2) { /* 3ª columna */
+        font-weight: bold;
+    }
+    #tabla3 tr:first-child td,
+    #tabla3 tr:last-child td {
+        background: #444;
+        color:  #ccc;
+        font-weight: bold;
+    }
+    #tabla3 td:empty {
+        background: white !important;
+    }
+</style>
+</head>
+<body>
+<header>
+    <h1>Tablas</h1>
+</header>
+
+<article>
+    <h2>Tabla 3</h2>
+   <table id="tabla3">
+  <tr>
+    <td></td>
+    <td>EQUIPOS</td>
+    <td>PJ</td>
+    <td>PG</td>
+    <td>PE</td>
+    <td>PP</td>
+    <td>GF</td>
+    <td>GC</td>
+    <td>DG</td>
+    <td>PTS</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Alianza Lima</td>
+    <td>11</td>
+    <td>8</td>
+    <td>3</td>
+    <td>0</td>
+    <td>20</td>
+    <td>5</td>
+    <td>15</td>
+    <td>27</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Sporting Cristal</td>
+    <td>11</td>
+    <td>8</td>
+    <td>2</td>
+    <td>1</td>
+    <td>27</td>
+    <td>13</td>
+    <td>14</td>
+    <td>26</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Melgar</td>
+    <td>12</td>
+    <td>7</td>
+    <td>3</td>
+    <td>2</td>
+    <td>16</td>
+    <td>9</td>
+    <td>7</td>
+    <td>24</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Unión Comercio</td>
+    <td>12</td>
+    <td>6</td>
+    <td>1</td>
+    <td>5</td>
+    <td>17</td>
+    <td>13</td>
+    <td>4</td>
+    <td>19</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>Universitario</td>
+    <td>12</td>
+    <td>5</td>
+    <td>3</td>
+    <td>4</td>
+    <td>13</td>
+    <td>12</td>
+    <td>1</td>
+    <td>18</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>Sport Huancayo</td>
+    <td>12</td>
+    <td>5</td>
+    <td>3</td>
+    <td>4</td>
+    <td>10</td>
+    <td>12</td>
+    <td>-2</td>
+    <td>18</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>Cienciano</td>
+    <td>12</td>
+    <td>5</td>
+    <td>2</td>
+    <td>5</td>
+    <td>16</td>
+    <td>18</td>
+    <td>-2</td>
+    <td>17</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>Los Caimanes</td>
+    <td>12</td>
+    <td>4</td>
+    <td>3</td>
+    <td>5</td>
+    <td>13</td>
+    <td>17</td>
+    <td>-4</td>
+    <td>15</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>Real Garcilaso</td>
+    <td>12</td>
+    <td>3</td>
+    <td>5</td>
+    <td>4</td>
+    <td>15</td>
+    <td>14</td>
+    <td>1</td>
+    <td>14</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>León de Huánuco</td>
+    <td>11</td>
+    <td>4</td>
+    <td>2</td>
+    <td>5</td>
+    <td>15</td>
+    <td>16</td>
+    <td>-1</td>
+    <td>14</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>EQUIPOS</td>
+    <td>PJ</td>
+    <td>PG</td>
+    <td>PE</td>
+    <td>PP</td>
+    <td>GF</td>
+    <td>GC</td>
+    <td>DG</td>
+    <td>PTS</td>
+  </tr>
+</table>
+   
+   
+   
+    <h2>Tabla 1</h2>
+
+    <table id="tabla1">
+        <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Email</th>
+            <th>Teléfono</th>
+        </tr>
+        <tr>
+            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, voluptate?</td>
+            <td>Officia sint quam quos.</td>
+            <td>Similique non, reprehenderit placeat harum sequi aliquam odio incidunt ipsa!</td>
+            <td>Rem, non. Officia eos tempora, mollitia quis possimus laborum quasi.</td>
+        </tr>
+        <tr>
+            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, inventore.</td>
+            <td>Id similique aliquam modi</td>
+            <td>Suscipit esse adipisci commodi maxime et ea perspiciatis, nemo. Nihil!</td>
+            <td>Expedita non vel architecto vitae? Cum tempora eos id ad!</td>
+        </tr>
+        <tr>
+            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, tempore.</td>
+            <td>Alias qui</td>
+            <td>Consectetur debitis corrupti itaque suscipit, assumenda ut, incidunt accusamus doloremque.</td>
+            <td>Earum asperiores obcaecati illum ipsum consectetur, sed quas temporibus dolores!</td>
+        </tr>
+    </table>
+
+    <h2>Tabla 2</h2>
+
+    <table id="tabla2">
+        <tr>
+            <td>Minima, in.</td>
+            <td>Lorem ipsum.</td>
+            <td>Quia, eveniet?</td>
+            <td>Voluptatibus, quibusdam.</td>
+        </tr>
+        <tr>
+            <td>Lorem ipsum.</td>
+            <td>Eveniet, explicabo!</td>
+            <td>Ex, nemo.</td>
+            <td>Id, officiis?</td>
+        </tr>
+        <tr>
+            <td>Enim, aliquam.</td>
+            <td>Lorem ipsum.</td>
+
+            <td>At, voluptatum!</td>
+            <td>Natus, provident.</td>
+        </tr>
+        <tr>
+            <td>Velit, provident!</td>
+            <td>Maxime, rerum.</td>
+            <td>Lorem ipsum.</td>
+            <td>Expedita, doloribus.</td>
+        </tr>
+        <tr>
+            <td>Lorem ipsum.</td>
+            <td>Ipsa, enim.</td>
+            <td>Laboriosam, officia?</td>
+            <td>Consectetur, delectus!</td>
+        </tr>
+    </table>
+    
+    h
+    
+    
+</article>
+</body>
+</html>

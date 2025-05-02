@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>JavaScript</title>
+        <script>
+            
+            /* abrir una ventana o pestanaña nueva */
+            function abrirVentana(url) {
+                window.open(url, '' , 'width=800, height=600');
+                document.body.style.backgroundColor= 'yellow';
+            }
+             /*  Estructura condicional  **/
+           /* 
+                if (condicion) {
+                     acciones cuando true;
+                } else {
+                    acciones cuando es false;
+                }
+            */
+            
+        </script>
+        
+        <script src="ejemplo.js"></script>
+        
+    </head>
+    <body>
+        
+        <header>
+            <h1>JavaScript</h1>
+        </header>
+        
+        
+        <article>
+           
+           
+            
+            
+            <input type="button" value="Saludar" onclick="window.alert('Hola Mundo');">
+          
+                       <br>
+                        
+            <input type="button" value="Cambiar color" onclick="document.body.style.backgroundColor= 'tomato';">
+            <input type="button" value="Cambiar color" 
+            onclick="document.body.style.backgroundColor= 'white';">
+            <input type="button" value="Cambiar color" 
+            onclick="document.body.style.fontFamily= 'sans-serif';">
+            
+            <hr>
+            
+            <p>
+                <script>
+                    var numero = 2;
+                    var cuadrado = numero * numero;
+                    document.write(cuadrado);
+
+                </script>
+            </p>
+           <form action="http://www.cursos-diseno.es/mostrar.php" 
+              onsubmit="return confirm('¿Esta seguro de enviar los datos?');">
+               <label>
+                    <input type="checkbox" name="acepta" value="si" required 
+                           oninput="document.getElementById('enviar').disabled =!  this.checked;">
+                    Acepto los terminos, condiciones y tratamiento de datos.
+                </label>
+                <br>
+                <input type="submit" value="Comprobar" disabled id="enviar">
+            </form>
+            
+            <select onchange="window.location = this.value;" >
+                <option value="#">Ir a...</option>
+                <option value="http://www.nebrija.com">FP Nebrija</option>
+                <option value="http://www.wikipedia.org">Wikipedia</option>
+                <option value="http://www.google.es">Google</option>
+            </select>
+            
+            <br>
+            
+            <input type="button" value="Abrir Google" 
+            onclick="abrirVentana('http://www.google.es')">
+            <input type="button" value="Abrir Wikipedia" 
+            onclick="abrirVentana('http://www.wikipedia.org')">
+            
+        </article>
+        
+        <!--
+        <script>
+                alert('Bienvenido');
+        </script>
+        -->
+    </body>
+</html>

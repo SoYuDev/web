@@ -20,6 +20,12 @@ pauseBot.addEventListener("click", () => {
 // Silenciar o activar el sonido del video
 muteBot.addEventListener("click", () => {
     video.muted = !video.muted; // Alternar entre silenciar y activar sonido
+
+    if (video.muted) {
+        alert("El sonido está silenciado.");
+    } else {
+        alert("El sonido está activado.");
+    }
 });
 
 // --------------------------------------------------------------------//

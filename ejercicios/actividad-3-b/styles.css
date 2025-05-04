@@ -55,7 +55,7 @@ nav a {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 1500px;
+    height: 2500px;
     border: 5px solid var(--dorado);
     border-left: none;
     border-right: none;
@@ -99,5 +99,9 @@ hr {
 }
 
 body h3 {
+    color: white;
+}
+
+body h4 {
     color: white;
 }
